@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html>
+<title>Gaming | TechLab</title>
+<head>
+	<meta name="utf-8">
+	<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<style>
+	body,h1,h2,h3,h4,h5,h6 {font-family: "Raleway", sans-serif}
+
+	body, html {
+		height: 100%;
+		line-height: 1.8;
+	}
+
+	.bgimg-1 {
+		background-position: center;
+		background-size: cover;
+		background-image: url("../images/photosetup.jpg");
+		min-height: 100%;
+	}
+
+	.w3-bar .w3-button {
+		padding: 16px;
+	}
+	#upBtn {
+		display: none;
+		position: fixed;
+		bottom: 20px;
+		right: 30px;
+		z-index: 99;
+		border: none;
+		outline: none;
+		background-color: white;
+		cursor: pointer;
+		padding: 15px;
+		border-radius: 10px;
+		height: 75px;
+		width: 75px;
+	}
+
+	#upBtn:hover {
+		background-color: rgba(179, 179, 179, 0.333);
+	}
+
+	.btnImg {
+		display: block;
+		margin-left: auto;
+		margin-right: auto;
+		width: 100%;
+	}
+
+	/* Scroll Down */
+
+	.scrolldown-wrapper {
+		left: 50%;
+		position: absolute;
+		text-align: center;
+		bottom: 0;
+		transform: translate(-50%, -50%);
+	}
+
+	.scrolldown {
+		border: 2px solid #FFFFFF;
+		border-radius: 30px;
+		height: 46px;
+		margin: 0 auto 8px;
+		text-align: center;
+		width: 30px;
+	}
+
+	.scrolldown-p1,
+	.scrolldown-p2 {
+		animation-duration: 1.5s;
+		animation-name: scrolldown;
+		animation-iteration-count: infinite;
+		fill: #FFFFFF;
+	}
+
+	.scrolldown-p2 {
+		animation-delay: .75s;
+	}
+
+	@keyframes scrolldown {
+		0% {
+			opacity: 0;
+			transform: translate(0, -8px);
+		}
+		50% {
+			opacity: 1;
+			transform: translate(0, 0);
+		}
+		100% {
+			opacity: 0;
+			transform: translate(0, 8px);
+		}
+	}
+	.w3-quarter img{margin-bottom: 0px; cursor: pointer}
+	.w3-quarter img:hover{opacity: 0.6; transition: 0.3s}
+</style>
+<body>
+<div class="w3-top">
+	<div class="w3-bar w3-white w3-card" id="myNav	bar">
+		<a href="../index.html" class="w3-bar-item w3-button w3-wide">TechLab</a>
+		<div class="w3-right w3-hide-small">
+			<a href="#pcs" class="w3-bar-item w3-button">PCs</a>
+			<a href="#peripherique" class="w3-bar-item w3-button">Périphériques</a>
+			<a href="#jeux" class="w3-bar-item w3-button">Jeux</a>
+		</div>
+
+		<a href="javascript:void(0)" class="w3-bar-item w3-button w3-right w3-hide-large w3-hide-medium" onclick="w3_open()">
+			<i class="fa fa-bars"></i>
+		</a>
+	</div>
+</div>
+<header class="bgimg-1 w3-display-container w3-grayscale-min" id="home">
+	<div class="w3-display-left w3-text-white" style="padding:48px">
+		<span class="w3-jumbo w3-hide-small">Gaming</span><br>
+		<span class="w3-xxlarge w3-hide-large w3-hide-medium">Gaming</span><br>
+		<span class="w3-large">Passioner par les jeux vidéos,<br>nous sommes fière de partager notre passions avec vous<br>peu importe vos besoins.</span>
+		<p><a href="#about" class="w3-button w3-white w3-padding-large w3-large w3-margin-top w3-opacity w3-hover-opacity-off">Découvrir</a></p>
+	</div>
+	<div class="w3-display-bottomleft w3-text-grey w3-large" style="padding:24px 48px">
+		<a href="https://www.facebook.com/"><i class="fa fa-facebook-official w3-hover-opacity"></i></a>
+		<a href="https://www.instagram.com/"><i class="fa fa-instagram w3-hover-opacity"></i></a>
+		<a href="https://twitter.com/home/"><i class="fa fa-twitter w3-hover-opacity"></i></a>
+		<a href="https://fr.linkedin.com/"><i class="fa fa-linkedin w3-hover-opacity"></i></a>
+	</div>
+	<div class="scrolldown-wrapper">
+		<div class="scrolldown">
+			<svg height="30" width="10">
+				<circle class="scrolldown-p1" cx="5" cy="15" r="2" />
+				<circle class="scrolldown-p2" cx="5" cy="15" r="2" />
+			</svg>
+		</div>
+	</div>
+</header>
+<nav class="w3-sidebar w3-bar-block w3-black w3-card w3-animate-left w3-hide-medium w3-hide-large" style="display:none" id="mySidebar">
+	<a href="javascript:void(0)" onclick="close()" class="w3-bar-item w3-button w3-large w3-padding-16">Close ×</a>
+	<a href="#pcs" class="w3-bar-item w3-button">PCs</a>
+	<a href="#peripherique" class="w3-bar-item w3-button">Périphériques</a>
+	<a href="#jeux" class="w3-bar-item w3-button">Jeux</a>
+</nav>
+<div class="w3-container" style="padding:128px 16px" id="about">
+	<h3 class="w3-center">À propos de nous</h3>
+	<p class="w3-center w3-large">Bienvenue dans la section Gaming de TechLab,<br>ici nous vous permettons de créer le setup de vos rêve en partant de l'utilisation souhaitée.</p>
+	<div class="w3-container" style="padding:128px 16px" id="pcs">
+		<div class="w3-container w3-center w3-dark-grey" style="padding:128px 16px">
+			<h3 class="w3-large">PCs</h3>
+			<p class="w3-center w3-large">Voici la sections pc dans laquelle nous vous proposons plusieurs models selon les gammes,<br>
+				les pcs ci-dessous sont tous dit "custom" car ils sont montés par nos expert selon vos goûts et vos envies,<br>
+				Ce qui nous permet de créé des machines parfaitement adapté à votre usage avec des design inédits.</p>
+			<div class="w3-row-padding" style="margin-top:64px">
+				<div class="w3-third w3-section">
+					<ul class="w3-ul w3-white w3-hover-shadow">
+						<li class="w3-black w3-xlarge w3-padding-32">Casques</li>
+						<li class="w3-padding-16"><b>Haut</b> de gamme</li>
+						<li class="w3-padding-16"><b>Moyen</b> de gamme</li>
+						<li class="w3-padding-16"><b>Entré</b> de gamme</li>
+						<li class="w3-light-grey w3-padding-24">
+							<form action="../Périphériques/Casques/index.html">
+								<button class="w3-button w3-black w3-padding-large">Choisir</button>
+							</form>
+						</li>
+					</ul>
+				</div>
+				<div class="w3-third w3-section">
+					<ul class="w3-ul w3-white w3-hover-shadow">
+						<li class="w3-black w3-xlarge w3-padding-32">Claviers</li>
+						<li class="w3-padding-16"><b>Haut</b> de gamme</li>
+						<li class="w3-padding-16"><b>Moyen</b> de gamme</li>
+						<li class="w3-padding-16"><b>Entré</b> de gamme</li>
+						<li class="w3-light-grey w3-padding-24">
+							<form action="../Périphériques/Claviers/index.html">
+								<button class="w3-button w3-black w3-padding-large">Choisir</button>
+							</form>
+						</li>
+					</ul>
+				</div>
+				<div class="w3-third w3-section">
+					<ul class="w3-ul w3-white w3-hover-shadow">
+						<li class="w3-black w3-xlarge w3-padding-32">Souris</li>
+						<li class="w3-padding-16"><b>Haut</b> de gamme</li>
+						<li class="w3-padding-16"><b>Moyen</b> de gamme</li>
+						<li class="w3-padding-16"><b>Entré</b> de gamme</li>
+						<li class="w3-light-grey w3-padding-24">
+							<form action="../Périphériques/Souris/index.html">
+								<button class="w3-button w3-black w3-padding-large">Choisir</button>
+							</form>
+						</li>
+					</ul>
+				</div>
+			</div>
+			<h3 class="w3-center" id="jeux">Jeux</h3>
+				<p class="w3-center w3-large">Voici la sections jeux dans laquelle nous vous proposons quelques un des plus tendances.</p>
+			<div class="w3-main w3-content" style="max-width:1600px;margin-top:64px">
+				<div class="w3-row w3-grayscale-min">
+					<div class="w3-quarter">
+						<img src="../images/ppfortnites6ch2.jpg" style="width:100%" onclick="onClick(this)" alt="Fortnite">
+						<img src="../images/ppvalorant.jpg" style="width:100%" onclick="onClick(this)" alt="Valorant">
+						<img src="../images/ppwarzones3.jpg" style="width:100%" onclick="onClick(this)" alt="Warzone">
+					</div>
+
+					<div class="w3-quarter">
+						<img src="../images/ppgtav.jpg" style="width:100%" onclick="onClick(this)" alt="GTA V">
+						<img src="../images/ppcyberpunk.jpg" style="width:100%" onclick="onClick(this)" alt="Cyberpunk">
+						<img src="../images/ppwatchdogslegion.jpg" style="width:100%" onclick="onClick(this)" alt="Watch Dogs Legion">
+					</div>
+
+					<div class="w3-quarter">
+						<img src="../images/pprocketleague.jpg" style="width:100%" onclick="onClick(this)" alt="Rocket League">
+						<img src="../images/ppfallguys.jpg" style="width:100%" onclick="onClick(this)" alt="Fall guys">
+						<img src="../images/ppsflightsimulator.jpg" style="width:100%" onclick="onClick(this)" alt="Flight Simulator">
+					</div>
+
+					<div class="w3-quarter">
+						<img src="../images/ppamongus.jpg" style="width:100%" onclick="onClick(this)" alt="Among us">
+						<img src="../images/pphaloinfinte.jfif" style="width:100%" onclick="onClick(this)" alt="Halo Infinite">
+						<img src="../images/ppforzah4.jpg" style="width:100%" onclick="onClick(this)" alt="Forza horizon 4">
+					</div>
+				</div>
+			</div>
+			<div class="w3-container w3-center w3-dark-grey" style="padding:128px 16px" id="peripherique">
+				<h3 class="w3-large">Périphériques</h3>
+				<p class="w3-center w3-large">Voici la sections périphériques dans laquelle nous vous proposons un vaste choix des meilleurs selon les marques et leurs gammes.</p>
+				<div class="w3-row-padding" style="margin-top:64px">
+					<div class="w3-third w3-section">
+						<ul class="w3-ul w3-white w3-hover-shadow">
+							<li class="w3-black w3-xlarge w3-padding-32">Casques</li>
+							<li class="w3-padding-16"><b>Haut</b> de gamme</li>
+							<li class="w3-padding-16"><b>Moyen</b> de gamme</li>
+							<li class="w3-padding-16"><b>Entré</b> de gamme</li>
+							<li class="w3-light-grey w3-padding-24">
+								<form action="../Périphériques/Casques/index.html">
+									<button class="w3-button w3-black w3-padding-large">Choisir</button>
+								</form>
+							</li>
+						</ul>
+					</div>
+					<div class="w3-third w3-section">
+						<ul class="w3-ul w3-white w3-hover-shadow">
+							<li class="w3-black w3-xlarge w3-padding-32">Claviers</li>
+							<li class="w3-padding-16"><b>Haut</b> de gamme</li>
+							<li class="w3-padding-16"><b>Moyen</b> de gamme</li>
+							<li class="w3-padding-16"><b>Entré</b> de gamme</li>
+							<li class="w3-light-grey w3-padding-24">
+								<form action="../Périphériques/Claviers/index.html">
+									<button class="w3-button w3-black w3-padding-large">Choisir</button>
+								</form>
+							</li>
+						</ul>
+					</div>
+					<div class="w3-third w3-section">
+						<ul class="w3-ul w3-white w3-hover-shadow">
+							<li class="w3-black w3-xlarge w3-padding-32">Souris</li>
+							<li class="w3-padding-16"><b>Haut</b> de gamme</li>
+							<li class="w3-padding-16"><b>Moyen</b> de gamme</li>
+							<li class="w3-padding-16"><b>Entré</b> de gamme</li>
+							<li class="w3-light-grey w3-padding-24">
+								<form action="../Périphériques/Souris/index.html">
+									<button class="w3-button w3-black w3-padding-large">Choisir</button>
+								</form>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+			<div id="modal01" class="w3-modal w3-black" style="padding-top:0" onclick="this.style.display='none'">
+				<span class="w3-button w3-black w3-xlarge w3-display-topright">×</span>
+				<div class="w3-modal-content w3-animate-zoom w3-center w3-transparent w3-padding-64">
+					<img id="img01" class="w3-image">
+					<p id="caption"></p>
+				</div>
+			</div>
+			<footer class="w3-center w3-black w3-padding-64">
+				<div class="w3-xlarge w3-section">
+					<a href="https://www.facebook.com/"><i class="fa fa-facebook-official w3-hover-opacity"></i></a>
+					<a href="https://www.instagram.com/"><i class="fa fa-instagram w3-hover-opacity"></i></a>
+					<a href="https://twitter.com/home/"><i class="fa fa-twitter w3-hover-opacity"></i></a>
+					<a href="https://fr.linkedin.com/"><i class="fa fa-linkedin w3-hover-opacity"></i></a>
+				</div>
+				<p>Powered by <a href="../CV/index.html" title="W3.CSS" target="_blank" class="w3-hover-text-green">Achille Balme</a></p>
+			</footer>
+			<button onclick="upFunction()" id="upBtn" title="Remonter"><img class="btnImg" src="../up.png"></button>
+			<div id="footer">
+			<script>
+				function open() {
+					if (mySidebar.style.display === 'block') {
+						mySidebar.style.display = 'none';
+					} else {
+						mySidebar.style.display = 'block';
+					}
+				}
+
+				function close() {
+					mySidebar.style.display = "none";
+				}
+				var mybutton = document.getElementById("upBtn");
+				window.onscroll = function() {scrollFunction()};
+				function scrollFunction() {
+					if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+						mybutton.style.display = "block";
+					} else {
+						mybutton.style.display = "none";
+					}
+				}
+				function upFunction() {
+					document.body.scrollTop = 0;
+					document.documentElement.scrollTop = 0;
+				}
+				function onClick(element) {
+					document.getElementById("img01").src = element.src;
+					document.getElementById("modal01").style.display = "block";
+					var captionText = document.getElementById("caption");
+					captionText.innerHTML = element.alt;
+				}
+			</script>
+	</body>
+</html>

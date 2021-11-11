@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html>
+<title>Claviers | TechLab</title>
+<head>
+    <meta name="utf-8">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<style>
+    body,h1,h2,h3,h4,h5,h6 {font-family: "Raleway", sans-serif}
+
+    body, html {
+        height: 100%;
+        line-height: 1.8;
+    }
+
+    .bgimg-1 {
+        background-position: center;
+        background-size: cover;
+        background-image: url("../../images/apexprotkl.jpg");
+        min-height: 100%;
+    }
+
+    .w3-bar .w3-button {
+        padding: 16px;
+    }
+    #upBtn {
+        display: none;
+        position: fixed;
+        bottom: 20px;
+        right: 30px;
+        z-index: 99;
+        border: none;
+        outline: none;
+        background-color: white;
+        cursor: pointer;
+        padding: 15px;
+        border-radius: 10px;
+        height: 75px;
+        width: 75px;
+    }
+
+    #upBtn:hover {
+        background-color: rgba(179, 179, 179, 0.333);
+    }
+
+    .btnImg {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        width: 100%;
+    }
+
+    /* Scroll Down */
+
+    .scrolldown-wrapper {
+        left: 50%;
+        position: absolute;
+        text-align: center;
+        bottom: 0;
+        transform: translate(-50%, -50%);
+    }
+
+    .scrolldown {
+        border: 2px solid #FFFFFF;
+        border-radius: 30px;
+        height: 46px;
+        margin: 0 auto 8px;
+        text-align: center;
+        width: 30px;
+    }
+
+    .scrolldown-p1,
+    .scrolldown-p2 {
+        animation-duration: 1.5s;
+        animation-name: scrolldown;
+        animation-iteration-count: infinite;
+        fill: #FFFFFF;
+    }
+
+    .scrolldown-p2 {
+        animation-delay: .75s;
+    }
+
+    @keyframes scrolldown {
+        0% {
+            opacity: 0;
+            transform: translate(0, -8px);
+        }
+        50% {
+            opacity: 1;
+            transform: translate(0, 0);
+        }
+        100% {
+            opacity: 0;
+            transform: translate(0, 8px);
+        }
+    }
+</style>
+<body>
+<div class="w3-top">
+    <div class="w3-bar w3-white w3-card" id="myNavbar">
+        <a href="../index.html" class="w3-bar-item w3-button w3-wide">TechLab</a>
+        <div class="w3-right w3-hide-small">
+        </div>
+
+        <a href="javascript:void(0)" class="w3-bar-item w3-button w3-right w3-hide-large w3-hide-medium" onclick="w3_open()">
+            <i class="fa fa-bars"></i>
+        </a>
+    </div>
+</div>
+<nav class="w3-sidebar w3-bar-block w3-black w3-card w3-animate-left w3-hide-medium w3-hide-large" style="display:none" id="mySidebar">
+    <a href="javascript:void(0)" onclick="close()" class="w3-bar-item w3-button w3-large w3-padding-16">Close ×</a>
+</nav>
+<header class="bgimg-1 w3-display-container w3-grayscale-min" id="home">
+    <div class="w3-display-left w3-text-white" style="padding:48px">
+        <span class="w3-jumbo w3-hide-small">Clavier</span><br>
+        <span class="w3-xxlarge w3-hide-large w3-hide-medium">Clavier</span><br>
+        <span class="w3-large">L'importance d'un bon ressenti.</span>
+        <p><a href="#about" class="w3-button w3-white w3-padding-large w3-large w3-margin-top w3-opacity w3-hover-opacity-off">Découvrir</a></p>
+    </div>
+    <div class="w3-display-bottomleft w3-text-grey w3-large" style="padding:24px 48px">
+        <a href="https://www.facebook.com/"><i class="fa fa-facebook-official w3-hover-opacity"></i></a>
+        <a href="https://www.instagram.com/"><i class="fa fa-instagram w3-hover-opacity"></i></a>
+        <a href="https://twitter.com/home/"><i class="fa fa-twitter w3-hover-opacity"></i></a>
+        <a href="https://fr.linkedin.com/"><i class="fa fa-linkedin w3-hover-opacity"></i></a>
+    </div>
+    <div class="scrolldown-wrapper">
+        <div class="scrolldown">
+            <svg height="30" width="10">
+                <circle class="scrolldown-p1" cx="5" cy="15" r="2" />
+                <circle class="scrolldown-p2" cx="5" cy="15" r="2" />
+            </svg>
+        </div>
+    </div>
+</header>
+<div class="w3-container" style="padding:128px 16px" id="about">
+    <h3 class="w3-center">Pourquoi le temps de réponse ?</h3>
+    <p class="w3-center w3-large"></p>
+</div>
+<footer class="w3-center w3-black w3-padding-64">
+    <div class="w3-xlarge w3-section">
+        <a href="https://www.facebook.com/"><i class="fa fa-facebook-official w3-hover-opacity"></i></a>
+        <a href="https://www.instagram.com/"><i class="fa fa-instagram w3-hover-opacity"></i></a>
+        <a href="https://twitter.com/home/"><i class="fa fa-twitter w3-hover-opacity"></i></a>
+        <a href="https://fr.linkedin.com/"><i class="fa fa-linkedin w3-hover-opacity"></i></a>
+    </div>
+    <p>Powered by <a href="../CV/index.html" title="W3.CSS" target="_blank" class="w3-hover-text-green">Achille Balme</a></p>
+</footer>
+<button onclick="upFunction()" id="upBtn" title="Remonter"><img class="btnImg" src="../../up.png"></button>
+<div id="footer">
+    <script>
+        function open() {
+            if (mySidebar.style.display === 'block') {
+                mySidebar.style.display = 'none';
+            } else {
+                mySidebar.style.display = 'block';
+            }
+        }
+
+        function close() {
+            mySidebar.style.display = "none";
+        }
+        var mybutton = document.getElementById("upBtn");
+        window.onscroll = function() {scrollFunction()};
+        function scrollFunction() {
+            if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+                mybutton.style.display = "block";
+            } else {
+                mybutton.style.display = "none";
+            }
+        }
+        function upFunction() {
+            document.body.scrollTop = 0;
+            document.documentElement.scrollTop = 0;
+        }
+    </script>
+</body>
+</html>
